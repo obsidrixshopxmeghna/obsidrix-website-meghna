@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist" # Change to .output/public if using Nitro server-side rendering
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

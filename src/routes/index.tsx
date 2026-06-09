@@ -722,15 +722,15 @@ export function Footer() {
 /* ------------------------- LOADER ------------------------- */
 function Loader() {
   const [done, setDone] = useState(false);
-  useEffect(() => { const t = setTimeout(() => setDone(true), 1100); return () => clearTimeout(t); }, []);
+  useEffect(() => { const t = setTimeout(() => setDone(true), 3000); return () => clearTimeout(t); }, []);
   if (done) return null;
   return (
-    <motion.div initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ delay: 0.9, duration: 0.4 }}
+    <motion.div initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ delay: 2.8, duration: 0.4 }}
       className="fixed inset-0 z-[100] bg-ink grid place-items-center pointer-events-none">
       <div className="text-center">
-        <motion.div initial={{ letterSpacing: "0.05em", opacity: 0 }} animate={{ letterSpacing: "0.5em", opacity: 1 }} transition={{ duration: 1.1, ease: [0.22,1,0.36,1] }}
+        <motion.div initial={{ letterSpacing: "0.05em", opacity: 0 }} animate={{ letterSpacing: "0.5em", opacity: 1 }} transition={{ duration: 3.0, ease: [0.22,1,0.36,1] }}
           className="font-display text-2xl md:text-3xl text-ivory">OBSIDRIX</motion.div>
-        <motion.div initial={{ width: 0 }} animate={{ width: "8rem" }} transition={{ duration: 1.1 }} className="mt-4 h-px gold-gradient mx-auto"/>
+        <motion.div initial={{ width: 0 }} animate={{ width: "8rem" }} transition={{ duration: 3.0 }} className="mt-4 h-px gold-gradient mx-auto"/>
       </div>
     </motion.div>
   );
